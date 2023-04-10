@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,24 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeCrashCourse"
         tools:targetApi="31">
+
         <activity
-            android:name=".photo_picker.PhotoPicker"
+            android:name=".observe_connectivity.ConnectivityChecker"
             android:exported="true"
-            android:label="@string/title_activity_photo_picker"
+            android:label="@string/title_activity_connectivity_checker"
             android:theme="@style/Theme.ComposeCrashCourse">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".photo_picker.PhotoPicker"
+            android:exported="true"
+            android:label="@string/title_activity_photo_picker"
+            android:theme="@style/Theme.ComposeCrashCourse"/>
+
         <activity
             android:name=".lazy_row_with_edittext.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeCrashCourse">
-
-        </activity>
+            android:theme="@style/Theme.ComposeCrashCourse" />
     </application>
 
 </manifest>

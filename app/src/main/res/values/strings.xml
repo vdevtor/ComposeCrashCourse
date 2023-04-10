@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ComposeCrashCourse</string>
     <string name="title_activity_photo_picker">PhotoPicker</string>
+    <string name="title_activity_connectivity_checker">ConnectivityChecker</string>
 </resources>
